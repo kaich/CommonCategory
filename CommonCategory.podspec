@@ -8,8 +8,11 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "5.0"
   s.ios.deployment_target = "5.0"
   s.source       = { :git => "http://EXAMPLE/CommonCategory.git", :tag => "0.0.1" }
-  s.source_files  = "CommonCategory", "CommonCategory/**/*.{h,m}"
-  s.exclude_files = "Classes/Exclude"
   s.framework  = "QuartzCore"
   s.requires_arc = true
+
+  s.subspec 'Animation' do |ss|
+	   ss.source_files = 'Class/Animation/*.{h,m}'
+   end
+
 end
